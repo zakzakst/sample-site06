@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "path": "./themes"
+    }
+  ],
+  "settings": {
+    "emmet.includeLanguages": {
+      "nunjucks": "html"
+    }
+  },
+}
