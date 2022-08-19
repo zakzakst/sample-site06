@@ -4,6 +4,7 @@
 ?>
 
 <!-- ▼▼▼ フッター ▼▼▼ -->
+<!-- TODO: パンくず作成 -->
 <footer class="bg-gray-900 px-2 py-8 text-white">
   <div class="container mx-auto">
     <div class="flex justify-between">
