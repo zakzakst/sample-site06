@@ -2,8 +2,8 @@
 
 <?php
   $HERO_ITEM = array(
-    'title' => 'トップページ',
-    'subTitle' => 'サブタイトル',
+    'title' => get_bloginfo('name'),
+    'subTitle' => get_bloginfo('description'),
   );
   get_template_part('partials/hero', null, $HERO_ITEM);
 ?>

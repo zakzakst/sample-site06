@@ -13,6 +13,7 @@
       <main class="container mx-auto">
         <div class="flex">
           <div class="w-2/3 pr-6">
+            <!-- TODO: アイキャッチ画像 -->
             <?php the_content(); ?>
           </div>
           <div class="w-1/3 flex-shrink-0">

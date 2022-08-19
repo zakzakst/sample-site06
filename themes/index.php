@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<!-- TODO: index.phpはどのような構成にしておくのが一般的か聞いてみる -->
 <div class="px-2 py-16">
   <main class="container mx-auto">
     <div class="flex">
