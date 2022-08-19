@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+<?php
+  $HERO_ITEM = array(
+    'title' => 'プログラム',
+  );
+  get_template_part('partials/hero', null, $HERO_ITEM);
+?>
 <div class="px-2 py-16">
   <main class="container mx-auto">
     <div class="flex">
@@ -22,6 +28,8 @@
               </li>
             <?php endwhile; ?>
           </ul>
+          <!-- TODO: ページネーション対応 -->
+          <!-- TODO: カテゴリ分割 -->
         <?php else : ?>
           <h2>投稿が見つかりません。</h2>
         <?php endif; ?>

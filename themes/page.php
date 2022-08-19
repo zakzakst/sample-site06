@@ -7,7 +7,6 @@
   );
   get_template_part('partials/hero', null, $HERO_ITEM);
 ?>
-
 <div class="px-2 py-16">
   <main class="container mx-auto">
     <div class="flex">
