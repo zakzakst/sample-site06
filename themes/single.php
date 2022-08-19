@@ -15,6 +15,7 @@
           <div class="w-2/3 pr-6">
             <!-- TODO: アイキャッチ画像 -->
             <?php the_content(); ?>
+            <a href="<?php echo get_post_type_archive_link(get_post()->post_type); ?>">一覧リンク</a>
           </div>
           <div class="w-1/3 flex-shrink-0">
             <?php get_sidebar(); ?>
