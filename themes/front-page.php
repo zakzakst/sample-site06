@@ -17,8 +17,7 @@
         <?php get_template_part('partials/news-items', null, array('page' => 3)); ?>
       </div>
       <p class="mt-4 text-center">
-        <!-- TODO: 投稿一覧ページのリンク取得 -->
-        <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">
+        <a href="<?php echo home_url('/news/'); ?>" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">
           お知らせ一覧を見る
           <i class="fas fa-arrow-right ml-2"></i>
         </a>

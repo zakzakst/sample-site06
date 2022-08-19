@@ -8,7 +8,7 @@
   <div class="container mx-auto">
     <div class="flex justify-between">
       <div class="">
-        <a href="/">LOGO</a>
+        <a href="<?php echo esc_url(home_url()); ?>">LOGO</a>
       </div>
       <ul class="grid grid-cols-2 gap-4 sm:gap-x-4 sm:gap-y-2 sm:grid-cols-3">
         <?php foreach ($NAV_ITEMS as $ITEM) : ?>
