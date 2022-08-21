@@ -13,8 +13,11 @@
         <?php if (have_posts()) : ?>
           <ul>
             <?php while (have_posts()) : the_post(); ?>
-              <!-- TODO: index判定して最初の要素は「mt-2」クラスをつけない -->
-              <li class="mt-2">
+              <?php if ($wp_query->current_post == 0) : ?>
+                <li>
+              <?php else : ?>
+                <li class="mt-2">
+              <?php endif; ?>
                 <a href="<?php the_permalink(); ?>" class="overflow-hidden flex flex-row items-center h-32 bg-white rounded-lg border shadow-md hover:bg-gray-100">
                   <div class="flex-shrink-0 w-48 h-full">
                     <!-- TODO: サムネイル画像反映（登録されていない場合は「no image」表示 -->

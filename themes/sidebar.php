@@ -25,8 +25,11 @@
           while($new_query->have_posts()) :
           $new_query->the_post();
         ?>
-          <!-- TODO: index判定して最初の要素以外は「border-t border-gray-400」クラスをつける -->
-          <a href="<?php echo the_permalink(); ?>" class="block py-2 px-4 w-full cursor-pointer hover:text-blue-700"><?php echo the_title(); ?></a>
+          <?php if ($new_query->current_post == 0) : ?>
+            <a href="<?php echo the_permalink(); ?>" class="block py-2 px-4 w-full cursor-pointer hover:text-blue-700"><?php echo the_title(); ?></a>
+          <?php else : ?>
+            <a href="<?php echo the_permalink(); ?>" class="block py-2 px-4 w-full border-t border-gray-400 cursor-pointer hover:text-blue-700"><?php echo the_title(); ?></a>
+          <?php endif; ?>
         <?php
           endwhile;
           wp_reset_postdata();

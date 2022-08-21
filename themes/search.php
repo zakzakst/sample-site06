@@ -13,8 +13,11 @@
         <?php if (have_posts()) : ?>
           <ul>
             <?php while (have_posts()) : the_post(); ?>
-              <!-- TODO: index判定して最初の要素に「border-t」クラスをつける -->
-              <li class="border-b border-gray-400 border-dotted">
+              <?php if ($wp_query->current_post == 0) : ?>
+                <li class="border-t border-b border-gray-400 border-dotted">
+              <?php else : ?>
+                <li class="border-b border-gray-400 border-dotted">
+              <?php endif; ?>
                 <a href="<?php the_permalink(); ?>" class="block py-3">
                   <h2 class="font-bold"><?php the_title(); ?></h2>
                   <div><?php the_excerpt(); ?></div>

@@ -8,6 +8,7 @@
     // include('components/head/ogp.php');
     // include('components/head/schema.php');
     // include('components/page-loader/page-loader-head.php');
+    // カスタムフィールドのタイトル・ディスクリプションを設定
     wp_head();
   ?>
 </head>
