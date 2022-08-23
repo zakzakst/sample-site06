@@ -44,8 +44,12 @@
       // TODO: 現在のページを参照して、クラスをつける
     ?>
     <div class="mt-2 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-400">
-      <?php foreach ($LINK_ITEMS as $ITEM) : ?>
-        <a href="<?php echo $ITEM->url; ?>" class="block py-2 px-4 w-full cursor-pointer hover:text-blue-700"><?php echo $ITEM->title; ?></a>
+      <?php foreach ($LINK_ITEMS as $INDEX => $ITEM) : ?>
+        <?php if ($INDEX == 0) : ?>
+          <a href="<?php echo $ITEM->url; ?>" class="block py-2 px-4 w-full cursor-pointer hover:text-blue-700"><?php echo $ITEM->title; ?></a>
+        <?php else : ?>
+          <a href="<?php echo $ITEM->url; ?>" class="block py-2 px-4 w-full border-t border-gray-400 cursor-pointer hover:text-blue-700"><?php echo $ITEM->title; ?></a>
+        <?php endif; ?>
       <?php endforeach; ?>
     </div>
   <?php endif; ?>

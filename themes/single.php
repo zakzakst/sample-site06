@@ -17,6 +17,7 @@
             <!-- TODO: アイキャッチ画像 -->
             <?php the_content(); ?>
             <a href="<?php echo get_post_type_archive_link(get_post()->post_type); ?>">一覧リンク</a>
+            <?php get_template_part('partials/prev-next-links'); ?>
           <?php endwhile; ?>
         <?php else : ?>
           <h2>投稿が見つかりません。</h2>

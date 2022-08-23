@@ -1,12 +1,13 @@
 <?php get_header(); ?>
 
 <?php
-  if (is_category()) {
-    $title = single_cat_title('', false); 
-  } elseif (is_tag()) { 
-    $title = single_tag_title('', false); 
-  }
-  $title = $title . 'の記事一覧'; 
+  // if (is_category()) {
+  //   $title = single_cat_title('', false); 
+  // } elseif (is_tag()) { 
+  //   $title = single_tag_title('', false); 
+  // }
+  // $title = $title . 'の記事一覧';
+  $title = get_the_archive_title();
   $HERO_ITEM = array(
     'title' => $title,
   );

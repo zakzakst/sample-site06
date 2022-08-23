@@ -1,3 +1,4 @@
+<!-- ▼▼▼ ページネーション ▼▼▼ -->
 <?php wp_pagenavi(); ?>
 <!-- <div class="wp-pagenavi" role="navigation">
   <span class="pages">1 / 4</span>
@@ -7,3 +8,4 @@
   <a class="page larger" title="ページ 4" href="http://localhost/wordpress/news/page/4">4</a>
   <a class="nextpostslink" rel="next" aria-label="次のページ" href="http://localhost/wordpress/news/page/2">»</a>
 </div> -->
+<!-- ▲▲▲ ページネーション ▲▲▲ -->
