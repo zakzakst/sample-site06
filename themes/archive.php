@@ -1,8 +1,14 @@
 <?php get_header(); ?>
 
 <?php
+  if (is_category()) {
+    $title = single_cat_title('', false); 
+  } elseif (is_tag()) { 
+    $title = single_tag_title('', false); 
+  }
+  $title = $title . 'の記事一覧'; 
   $HERO_ITEM = array(
-    'title' => 'お知らせ',
+    'title' => $title,
   );
   get_template_part('partials/hero', null, $HERO_ITEM);
 ?>

@@ -31,7 +31,7 @@
               </li>
             <?php endwhile; ?>
           </ul>
-          <!-- TODO: ページネーション対応 -->
+          <?php get_template_part('partials/pagination'); ?>
           <!-- TODO: カテゴリ分割 -->
         <?php else : ?>
           <h2>投稿が見つかりません。</h2>
