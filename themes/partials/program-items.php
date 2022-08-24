@@ -18,8 +18,16 @@
     ?>
       <li class="bg-white rounded-lg border border-gray-200 shadow-md">
         <a href="<?php the_permalink(); ?>">
-          <!-- TODO: サムネイル画像反映（登録されていない場合は「no image」表示 -->
-          <img class="rounded-t-lg" src="https://placehold.jp/900x450.png?text=no+image" alt="" />
+          <?php
+            if (has_post_thumbnail()) :
+            $THUMBNAIL_URL = get_the_post_thumbnail_url();
+            $THUMBNAIL_ID = get_post_thumbnail_id($post->ID);
+            $THUMBNAIL_ALT = get_post_meta($THUMBNAIL_ID, '_wp_attachment_image_alt', true);
+          ?>
+            <img class="rounded-t-lg" src="<?php echo $THUMBNAIL_URL; ?>" alt="<?php echo $THUMBNAIL_ALT; ?>" />
+          <?php else : ?>
+            <img class="rounded-t-lg" src="https://placehold.jp/900x450.png?text=no+image" alt="NO IMAGE" />
+          <?php endif; ?>
         </a>
         <div class="p-5">
           <a href="<?php the_permalink(); ?>">

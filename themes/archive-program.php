@@ -20,8 +20,16 @@
               <?php endif; ?>
                 <a href="<?php the_permalink(); ?>" class="overflow-hidden flex flex-row items-center h-32 bg-white rounded-lg border shadow-md hover:bg-gray-100">
                   <div class="flex-shrink-0 w-48 h-full">
-                    <!-- TODO: サムネイル画像反映（登録されていない場合は「no image」表示 -->
-                    <img class="object-cover w-full h-full" src="https://placehold.jp/900x900.png?text=no+image" alt="">
+                    <?php
+                      if (has_post_thumbnail()) :
+                      $THUMBNAIL_URL = get_the_post_thumbnail_url($post, 'square');
+                      $THUMBNAIL_ID = get_post_thumbnail_id($post->ID);
+                      $THUMBNAIL_ALT = get_post_meta($THUMBNAIL_ID, '_wp_attachment_image_alt', true);
+                    ?>
+                      <img class="object-cover w-full h-full" src="<?php echo $THUMBNAIL_URL; ?>" alt="<?php echo $THUMBNAIL_ALT; ?>">
+                    <?php else : ?>
+                      <img class="object-cover w-full h-full" src="https://placehold.jp/900x900.png?text=no+image" alt="NO IMAGE">
+                    <?php endif; ?>
                   </div>
                   <div class="flex flex-col justify-between p-4 leading-normal">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900"><?php the_title(); ?></h5>
